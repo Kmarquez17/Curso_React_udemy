@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Formulario from './Formulario';
+import Resumen from './Resumen'
 import { obtenerDiferenciaAnio, calcularMarca, obtenerPlan } from '../helper';
 
 class App extends Component {
@@ -30,8 +31,8 @@ class App extends Component {
    
     //Tenempos resultado
 		this.setState({
-      resultado: resultado,
-      datos: datos
+			resultado: "$ " + resultado,
+			datos: datos
 		});
 	};
 
@@ -40,7 +41,13 @@ class App extends Component {
 			<div className="contenedor">
 				<Header titulo="Contizador de seguros de Autos" />
 				<div className="contenedor-formulario">
-					<Formulario cotizar={this.cotizar} />
+					<Formulario 
+						cotizar={this.cotizar}
+					 />
+					 <Resumen 
+						 datos={this.state.datos}
+						 resultado={this.state.resultado}
+					 />
 				</div>
 			</div>
 		);
