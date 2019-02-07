@@ -10,19 +10,18 @@ class FormularioGasto extends Component {
 	crearGasto = (e) =>{
 		//Prevenir el default
 		e.preventDefault();
+		if (this.nombreGasto.current.value !== "" && this.cantidadGasto.current.value !== ""){
+			//Crear objeto
+			const gastos ={
+				nombreGasto: this.nombreGasto.current.value,
+				cantidadGasto: this.cantidadGasto.current.value
+			}
+			//Agregarlo y enviarlo por props
+			this.props.agregarGastos(gastos);
 
-		//Crear objeto
-		const gastos ={
-			nombreGasto: this.nombreGasto.current.value,
-			cantidadGasto: this.cantidadGasto.current.value
+			//Reset Formulario
+			e.currentTarget.reset()
 		}
-		//Agregarlo y enviarlo por props
-		console.log(gastos)
-
-		this.props.agregarGastos(gastos);
-
-		//Reset Formulario
-		e.currentTarget.reset()
 	}
 
 	render() {
@@ -36,7 +35,7 @@ class FormularioGasto extends Component {
 
 				<div className="campo">
 					<label>Cantidad</label>
-					<input ref={this.cantidadGasto} className="u-full-width" type="text" placeholder="Ej. 300" />
+					<input ref={this.cantidadGasto} className="u-full-width" type="number" placeholder="Ej. 300" min="0" max="1000"/>
 				</div>
 
 				<input className="button-primary u-full-width" type="submit" value="Agregar" />
