@@ -9,9 +9,9 @@ import {validarPresupuesto} from '../Helper'
 class App extends Component {
 
   state = {
-    presupuesto:0,
-    restante:0,
-    gastos:[]
+    presupuesto:'',
+    restante:'',
+    gastos:{}
   }
 
   componentDidMount(){
@@ -52,6 +52,8 @@ class App extends Component {
     let restante = this.state.restante
     //Restamos
     restante-=restar
+
+    restante = String(restante)
     //Agregamos el nuevo state
     this.setState({
       restante: restante
