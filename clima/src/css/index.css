@@ -48,6 +48,8 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
 }
 .resultado {
   margin-top: 3rem;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 .resultado h2 {
   font-size: 1.6rem;
@@ -59,4 +61,17 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
 }
 .resultado .temperatura {
   font-size: 1.8rem;
+}
+
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 427.547px;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 427.547px;
+  }
 }
