@@ -1,7 +1,7 @@
-import React from 'react';
+import React /*, {Component} */from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
-import App from './App';
+// import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // class App extends Component {
@@ -9,19 +9,43 @@ import * as serviceWorker from './serviceWorker';
 // 		hola: 0,
 // 	};
 
-// 	componentDidUpdate(prevProps, prevState) {
-// 		console.log('He actualizado una vez mas');
-// 		if (prevState.hola !== this.state.hola) {
-// 			this.whileRep();
-// 		}
-// 	}
+	
+//     componentWillMount(){
+//         console.log('componentWillMount')
+//     }
+//     componentDidMount(){
+//         console.log('componentDidMount')
+//         console.log('------------------------------------------------------------------------------------------')
+//     }
+//     componentWillReceiveProps(){
+//         console.log('componentWillReceiveProps')
+//     }
+//     shouldComponentUpdate(nextProps, nextState) {
+//         console.log('shouldComponentUpdate')
+//         console.log('state '+ this.state.hola)
+//         console.log('next '+ nextState.hola)
+//         if (this.state.hola !== nextState.hola) {
+//           return true;
+//         }
+//     }
+//     componentWillUpdate(){
+//         console.log('componentWillUpdate')
+//     }
+//     componentDidUpdate(){
+//         console.log('componentDidUpdate')
+//         console.log('------------------------------------------------------------------------------------------')
+//     }
+//     componentWillUnmount(){
+//         console.log('componentWillUnmount')
+//     }
+    
 
 // 	whileRep = () => {
 // 		setTimeout(() => {
 // 			this.setState({
-// 				hola: 1 + 1,
+// 				hola: this.state.hola + 1,
 // 			});
-// 		}, 1000);
+// 		}, 100);
 // 	};
 
 // 	Click = () => {
@@ -29,6 +53,7 @@ import * as serviceWorker from './serviceWorker';
 // 	};
 
 // 	render() {
+//         console.log('render')
 // 		return (
 // 			<div>
 // 				<h1> {this.state.hola} </h1> <button onClick={this.Click}> Click </button>{' '}
