@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types';
 class Formulario extends Component {
 
     categoriaRef = React.createRef()
@@ -54,6 +54,10 @@ class Formulario extends Component {
 			</div>
 		);
 	}
+}
+
+Formulario.proTypes= {
+	consultarNoticias: PropTypes.func.isRequired
 }
 
 export default Formulario;
