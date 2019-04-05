@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const Evento = (props) => {
     //Validamos que no venga nulo el nombre
@@ -33,9 +34,17 @@ const Evento = (props) => {
                     <h3 className="uk-card-title">{props.info.name.text}</h3>
                     <p>{desc}</p>
                 </div>
+
+                <div className="uk-card-footer">
+                    <a href={props.info.url} className="uk-buttom "> Más Información</a>
+                </div>
             </div>
         </div>
     )
+}
+
+Evento.propTypes = {
+    info: PropTypes.object.isRequired 
 }
 
 export default Evento

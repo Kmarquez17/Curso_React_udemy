@@ -48,7 +48,7 @@ class App extends Component {
 	};
 
 	render() {
-		console.log('len',this.state.eventos.length)
+		console.log('len',this.state.eventos)
 		return (
 			<div>
 				<Header />

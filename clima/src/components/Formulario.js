@@ -42,6 +42,7 @@ class Formulario extends Component {
         //Reiniciar Form
     }
 	render() {
+		console.log(this.state.data)
 		return (
 			<div className="contenedor-form">
 				<div className="container">
