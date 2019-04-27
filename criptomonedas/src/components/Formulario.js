@@ -73,6 +73,7 @@ class Formulario extends Component {
 	}
 
 	render() {
+		console.log('aqui for')
 		const mensaje = (this.state.error) ? <Error mensaje="Ambos Campos Obligatorio" /> : ' '
 		return (
 			<form onSubmit={this.cotizarMoneda}>

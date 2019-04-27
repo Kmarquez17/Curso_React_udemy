@@ -38,6 +38,7 @@ class App extends Component {
 	}
 
 	render() {
+		console.log('Aqui')
 		const resultado = (this.state.cargando) ?  <Spinner/> : <Resultado resultado={this.state.resultado}/>
 		return (
 			<div className="container">
